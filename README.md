@@ -66,11 +66,7 @@ python3 main.py
 ### 5、配置 Github actions，每日自动预约，省去自己买服务器的成本。
 - 先Fork本项目，再去自己的项目中配置`PUSHPLUS_KEY`和和`PRIVATE_AES_KEY`
 
-#### 欢迎使用支付宝或微信请我喝咖啡（O.o）
 
-<img src="resources/imgs/wxqr.png" width="350">
-
-<img src="resources/imgs/zfbqr.jpg" width="350">
 
 ## 特别感谢
 技术思路：https://blog.csdn.net/weixin_47481826/article/details/128893239
