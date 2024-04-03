@@ -53,6 +53,7 @@ for section in configs.sections():
     process.init_headers(user_id=userId, token=token, lng=lng, lat=lat)
     # 根据配置中，要预约的商品ID，城市 进行自动预约
     try:
+        s_content=s_content+mobile
         for item in config.ITEM_CODES:
             max_shop_id = process.get_location_count(province=province,
                                                      city=city,
@@ -66,7 +67,8 @@ for section in configs.sections():
                 continue
             shop_info = source_data.get(str(max_shop_id))
             title = config.ITEM_MAP.get(item)
-            shopInfo = f'商品:{title};门店:{shop_info["name"]}'
+            # shopInfo = f'商品:{title};门店:{shop_info["name"]}'
+            shopInfo = f'商品:{title}'
             logging.info(shopInfo)
             reservation_params = process.act_params(max_shop_id, item)
             # 核心预约步骤
